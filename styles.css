@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    --bgc: #f7f7f7;
+    --color-text: #3d3d3d;
+    --color-heading: #1b1b1b;
+    --color-strong-text: #363636;
+    --color-border: #868686;
+
+    --font-size-primary: 1.6rem;
+    --font-size-heading-primary: 2.8rem;
+    --font-size-heading-second: 1.8rem;
+    --font-weight-heading: 600;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+    font-size: var(--font-size-primary);
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--bgc);
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+    --bgc-nav-li: #eeeeee;
+    --bgc-nav-link-hover: #ddd;
+
+    border-bottom: 1px solid var(--color-border);
+}
+
+nav header {
+    margin: 10px;
+    text-align: center;
+}
+
+nav li {
+    width: 100%;
+    border-top: 1px solid var(--color-border);
+    list-style: none;
+    background-color: var(--bgc-nav-li);
+}
+
+nav a {
+    display: block;
+    padding: 10px 20px;
+    font-size: var(--font-size-heading-second);
+    text-decoration: none;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: text-indent 0.3s ease-in-out;
+}
+
+nav a:hover {
+    font-weight: 600;
+    text-indent: 3px;
+    background-color: var(--bgc-nav-link-hover);
+}
+/* =============== */
+
+/* ===== MAIN ===== */
+main {
+    --bgc-code: #d8d8d8;
+
+    padding: 20px;
+}
+
+section {
+    margin-top: 40px;
+}
+
+section:first-child {
+    margin-top: 0;
+}
+
+h1 {
+    font-size: var(--font-size-heading-primary);
+}
+
+h2 {
+    font-size: var(--font-size-heading-primary);
+}
+
+h1,
+h2 {
+    margin: 0 0 5px 0;
+    font-weight: var(--font-weight-heading);
+    color: var(--color-heading);
+}
+
+p {
+    font-size: var(--font-size-primary);
+    margin: 0 0 16px 0;
+}
+
+main li {
+    margin: 0 0 16px 20px;
+}
+
+strong {
+    color: var(--color-strong-text);
+}
+
+img {
+    display: block;
+    width: 100%;
+    margin: 0 auto 16px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+code,
+pre {
+    text-align: start;
+    white-space: pre;
+    word-break: break-all;
+    word-wrap: break-word;
+    color: var(--color-text);
+    background-color: var(--bgc-code);
+    border-radius: 5px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+pre {
+    margin: 0 0 16px 0;
+    padding: 15px 10px;
+}
+/* =============== */
+
+/* ===== RESPONSIVE ===== */
+/* ----- Laptop, Desktop */
+@media only screen and (min-width: 815px) {
+    body {
+        flex-direction: row;
+    }
+
+    nav {
+        width: 28%;
+        height: 100%;
+        border-right: 2px solid var(--color-border);
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    main {
+        width: 72%;
+        margin-left: 29%;
+    }
+}
+
+/* =============== */
